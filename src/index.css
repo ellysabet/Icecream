@@ -1,0 +1,53 @@
+:root {
+  --cream: #fff6ea;
+  --cream-deep: #ffecd1;
+  --sky: #7ec8e3;
+  --sky-deep: #4fa8cf;
+  --sun: #ffc857;
+  --strawberry: #ff6b81;
+  --mint: #6fcf97;
+  --grape: #b28dff;
+  --ink: #3a2e39;
+  --ink-soft: #6b5c66;
+  --white: #ffffff;
+
+  --font-display: 'Jua', sans-serif;
+  --font-body: 'Gowun Dodum', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
