@@ -2,16 +2,114 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>오늘의 기분 아이스크림</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Ice Cream Weather</title>
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <!-- Plus Jakarta Sans (Stitch 디자인 지정 폰트) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (Stitch 코드와 동일한 CDN 방식) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              error: "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d2dbe1",
+              "inverse-on-surface": "#e9f2f8",
+              "inverse-surface": "#293236",
+              "outline-variant": "#bdc9c8",
+              "secondary-fixed-dim": "#9bcbf8",
+              "tertiary-container": "#f6bac9",
+              "on-secondary-container": "#265a81",
+              "primary-fixed-dim": "#7ad5d5",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#dbe4ea",
+              "on-primary-fixed": "#002020",
+              "on-tertiary-fixed-variant": "#653a46",
+              "surface-bright": "#f4faff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#f2b7c5",
+              "primary-fixed": "#97f2f2",
+              background: "#f4faff",
+              secondary: "#30628a",
+              "surface-variant": "#dbe4ea",
+              "surface-container-high": "#e0e9ef",
+              "on-tertiary-container": "#754754",
+              "on-primary": "#ffffff",
+              "inverse-primary": "#7ad5d5",
+              "surface-container": "#e6eff5",
+              "surface-container-low": "#ecf5fb",
+              "primary-container": "#7ed9d9",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#104a70",
+              "on-tertiary-fixed": "#32101b",
+              "on-primary-fixed-variant": "#004f50",
+              tertiary: "#80515e",
+              "on-background": "#141d21",
+              surface: "#f4faff",
+              "on-surface": "#141d21",
+              "on-primary-container": "#005f5f",
+              outline: "#6e7979",
+              "secondary-container": "#a1d1fe",
+              primary: "#006a6a",
+              "on-surface-variant": "#3e4949",
+              "surface-tint": "#006a6a",
+              "secondary-fixed": "#cde5ff",
+              "tertiary-fixed": "#ffd9e1",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#001d32",
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+            spacing: {
+              xs: "4px",
+              "max-width": "1200px",
+              lg: "48px",
+              "margin-mobile": "24px",
+              "margin-desktop": "auto",
+              md: "24px",
+              xl: "64px",
+              base: "8px",
+              sm: "12px",
+              gutter: "20px",
+            },
+            fontFamily: {
+              "title-md": ["Plus Jakarta Sans"],
+              "label-sm": ["Plus Jakarta Sans"],
+              "label-md": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "headline-xl": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "title-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "700" }],
+              "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }],
+              "body-lg": ["18px", { lineHeight: "26px", fontWeight: "500" }],
+              "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+              "headline-xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }],
+              "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "700" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      }
+    </script>
   </head>
-  <body>
+  <body class="font-body-md text-on-surface">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
