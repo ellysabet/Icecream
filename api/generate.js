@@ -3,7 +3,7 @@
 // Gemini API를 호출하고, 아이스크림 추천 결과를 JSON으로 돌려준다.
 // API 키는 절대 코드에 직접 쓰지 않고, Vercel 프로젝트의 환경변수 GEMINI_API_KEY 에서 읽는다.
 
-const GEMINI_MODEL = 'gemini-2.5-flash'
+const GEMINI_MODEL = 'gemini-3.1-flash-lite'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
